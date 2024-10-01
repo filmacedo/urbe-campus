@@ -14,12 +14,22 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract Functions {
 
-
-    uint public unsignedInteger = 10;
     event Hello(string indexed hello); // one function need to emit this event this way: emit Hello('hi')
     
+    function log(string memory _text) public {
+        emit Hello(_text);
+    }
+
     // assignment: create the functions here 
 
+    // Declare an event
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    // Function that triggers a transfer and emits an event
+    function transfer(address _to, uint256 _amount) public {
+        // Emit the event log with the transaction data
+        emit Transfer(msg.sender, _to, _amount);
+    }
 
 }
 

@@ -10,16 +10,21 @@ pragma solidity >=0.8.2 <0.9.0;
 contract Constructor {
 
 // create a state variable here
-uint public someVariable ;
-// create a constructor here
- constructor(uint initVariable) {
-    someVariable = initVariable;
- }
- 
- function getInitializedVariable() public view returns(uint){
-    return someVariable;
- }
 
+// create a constructor here
+// constructor(type nameOfVariable) {
+//     assign value to state variable here
+// }
+
+    address public owner;
+    uint public initVar;
+
+    // Constructor function: executed once when the contract is deployed
+    constructor(uint _var) {
+        // Initialize the owner to the address that deployed the contract (msg.sender)
+        owner = msg.sender;
+        initVar = _var;
+    }
 
 }
 

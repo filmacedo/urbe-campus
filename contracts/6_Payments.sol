@@ -10,6 +10,7 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract SimpleWallet {
     address public owner;
+    uint public amount;
 
     constructor() {
         owner = msg.sender;
@@ -26,7 +27,12 @@ contract SimpleWallet {
         return address(this).balance;
     }
 
-    function withdraw() public onlyOwner {
-        payable(owner).transfer(address(this).balance);
+    function withdraw(uint _amount) public onlyOwner {
+       
+        // Check if the contract has enough balance to withdraw the specified amount
+        require(address(this).balance >= _amount, "Insufficient balance");
+
+        // Transfer the specified amount to the owner
+        payable(owner).transfer(_amount);
     }
 }
