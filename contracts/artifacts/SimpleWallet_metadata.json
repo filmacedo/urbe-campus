@@ -12,6 +12,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "amount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
 					{
@@ -37,7 +50,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
 				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -76,11 +95,11 @@
 	},
 	"sources": {
 		"contracts/6_Payments.sol": {
-			"keccak256": "0x7450066785b58fbe82c1bd51e73c7b1a7380520e194c8b3cd27717877f99306f",
+			"keccak256": "0x4e65e5168b1688e9b6b00bc030941f7ef0d1ee20247be75650983f09a1105152",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4b2512e20a87fe104bd25c2f6e0246e4267c2d79bcf1bb44ce56f091be188d4c",
-				"dweb:/ipfs/QmadomAqaLjh37aMXAPkLhqecSxqU4JdgLfAMXWmmaMcRN"
+				"bzz-raw://3e99d467468e53dd0a92872514225e8e5830fe54520956077988667b7f05ce35",
+				"dweb:/ipfs/QmTTcXJa2u8Lx5s8Y4otPtbarGg8ntCWUfMQ34RyPzXYzX"
 			]
 		}
 	},
